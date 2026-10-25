@@ -51,3 +51,7 @@ Something broken? [Open a bug report](../../issues/new?template=bug_report.yml).
 ## Development
 
 See [DEVELOPMENT.md](DEVELOPMENT.md) for building, testing, and how the plugin works inside.
+
+## License
+
+[MIT](LICENSE). The bundled `sdpi-components.js` keeps its own license, stated at the top of that file.

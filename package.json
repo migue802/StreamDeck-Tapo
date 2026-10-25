@@ -2,6 +2,7 @@
 	"name": "streamdeck-tapo-lights",
 	"version": "0.1.0",
 	"description": "Stream Deck plugin for local control of the TP-Link Tapo L900 LED strip over KLAP.",
+	"license": "MIT",
 	"scripts": {
 		"build": "rollup -c",
 		"watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.migue802.tapo-lights\"",
