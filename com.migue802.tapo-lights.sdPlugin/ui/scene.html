@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Scene</title>
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+    <script src="tapo-hash.js"></script>
+    <script src="connection.js"></script>
+    <link rel="stylesheet" href="tapo.css" />
+</head>
+
+<body>
+    <sdpi-item label="Mode">
+        <sdpi-select setting="mode" default="color">
+            <option value="color">Colour</option>
+            <option value="white">White</option>
+        </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="Colour">
+        <sdpi-color setting="hex" default="#ff0000"></sdpi-color>
+    </sdpi-item>
+    <sdpi-item label="Temperature">
+        <sdpi-range setting="kelvin" min="2500" max="9000" step="100" default="4000" showlabels></sdpi-range>
+    </sdpi-item>
+    <sdpi-item label="Brightness">
+        <sdpi-range setting="brightness" min="1" max="100" step="1" default="80" showlabels></sdpi-range>
+    </sdpi-item>
+    <sdpi-item>
+        <p class="tapo-hint">Mode picks which one applies: <em>Colour</em> uses the colour, <em>White</em> uses the
+            temperature. The other is ignored.</p>
+    </sdpi-item>
+
+    <tapo-connection></tapo-connection>
+</body>
+
+</html>

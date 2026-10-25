@@ -1,0 +1,148 @@
+{
+	"Name": "Light Strip for Tapo L900",
+	"Version": "1.0.0.0",
+	"Author": "migue802",
+	"Actions": [
+		{
+			"Name": "Power On/Off",
+			"UUID": "com.migue802.tapo-lights.toggle",
+			"Icon": "imgs/actions/toggle/icon",
+			"Tooltip": "Turns the light strip on or off, showing its current colour. On a dial, rotate to adjust brightness.",
+			"PropertyInspectorPath": "ui/connection.html",
+			"Controllers": [
+				"Keypad",
+				"Encoder"
+			],
+			"DisableAutomaticStates": true,
+			"Encoder": {
+				"layout": "$B1",
+				"TriggerDescription": {
+					"Push": "Toggle",
+					"Rotate": "Brightness"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/toggle/off",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Image": "imgs/actions/toggle/on",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Brightness",
+			"UUID": "com.migue802.tapo-lights.brightness",
+			"Icon": "imgs/actions/brightness/icon",
+			"Tooltip": "Sets the strip to a fixed brightness. On a dial, rotate to adjust it live.",
+			"PropertyInspectorPath": "ui/brightness.html",
+			"Controllers": [
+				"Keypad",
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "$B1",
+				"TriggerDescription": {
+					"Push": "Toggle",
+					"Rotate": "Brightness"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/brightness/key",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Colour",
+			"UUID": "com.migue802.tapo-lights.color",
+			"Icon": "imgs/actions/color/icon",
+			"Tooltip": "Sets the strip to a colour. On a dial, rotate to sweep the hue.",
+			"PropertyInspectorPath": "ui/color.html",
+			"Controllers": [
+				"Keypad",
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "$B2",
+				"TriggerDescription": {
+					"Push": "Toggle",
+					"Rotate": "Hue"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/color/key",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "White Temperature",
+			"UUID": "com.migue802.tapo-lights.temperature",
+			"Icon": "imgs/actions/temperature/icon",
+			"Tooltip": "Sets the white colour temperature. On a dial, rotate from warm to cool.",
+			"PropertyInspectorPath": "ui/temperature.html",
+			"Controllers": [
+				"Keypad",
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "$B2",
+				"TriggerDescription": {
+					"Push": "Toggle",
+					"Rotate": "Temperature"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/temperature/key",
+					"TitleAlignment": "bottom"
+				}
+			]
+		},
+		{
+			"Name": "Scene",
+			"UUID": "com.migue802.tapo-lights.scene",
+			"Icon": "imgs/actions/scene/icon",
+			"Tooltip": "Applies a colour or white preset, with its brightness, in one press.",
+			"PropertyInspectorPath": "ui/scene.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/scene/key",
+					"TitleAlignment": "bottom"
+				}
+			]
+		}
+	],
+	"Category": "Light Strip for Tapo L900",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Control a TP-Link Tapo L900 light strip from Stream Deck over your local network: power, brightness, colour, white temperature and scenes, on keys and dials. No cloud. Not affiliated with TP-Link.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24"
+	},
+	"UUID": "com.migue802.tapo-lights",
+	"URL": "https://github.com/migue802/StreamDeck-Tapo"
+}

@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+build-test/
+dist/
+*.sdPlugin/bin/
+*.streamDeckPlugin
+
+# Runtime logs: they can hold the strip's IP and device details
+logs/
+*.sdPlugin/logs/
+*.log
+
+# Tooling
+__pycache__/
+.DS_Store
+.vscode/
+.idea/

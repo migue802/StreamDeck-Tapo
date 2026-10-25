@@ -1,0 +1,112 @@
+.tapo-hint {
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.4;
+	color: #9a9a9a;
+}
+
+.tapo-hint em {
+	color: #d8d8d8;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.tapo-status {
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.4;
+	color: #9a9a9a;
+}
+
+.tapo-status.ok {
+	color: #6fcf8a;
+}
+
+.tapo-status.error {
+	color: #ff7a7a;
+}
+
+.tapo-status.pending {
+	color: #d8d8d8;
+}
+
+/*
+ * Everything here is light DOM, outside the sdpi components that set the inspector typeface,
+ * so it would otherwise fall back to the browser default serif.
+ */
+tapo-connection {
+	font-family: var(--font-family, "Segoe UI", -apple-system, sans-serif);
+}
+
+/* Collapsible sections: a quiet divider row, so they read as part of the inspector. */
+.tapo-section {
+	margin: 0 0 6px;
+}
+
+.tapo-section > summary {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 10px;
+	padding: 7px 4px 5px;
+	border-top: 1px solid #3d3d3d;
+	color: #d8d8d8;
+	font-size: 9pt;
+	font-weight: 600;
+	list-style: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.tapo-section > summary::-webkit-details-marker {
+	display: none;
+}
+
+.tapo-section > summary::before {
+	content: "▸";
+	width: 10px;
+	color: #9a9a9a;
+}
+
+.tapo-section[open] > summary::before {
+	content: "▾";
+}
+
+.tapo-summary-state {
+	margin-left: auto;
+	color: #9a9a9a;
+	font-weight: 400;
+}
+
+.tapo-summary-state.ok {
+	color: #6fcf8a;
+}
+
+.tapo-link {
+	color: #6ab4ff;
+	font-size: 9pt;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.tapo-link:hover {
+	text-decoration: underline;
+}
+
+.tapo-steps {
+	margin: 0;
+	padding-left: 16px;
+	font-size: 9pt;
+	line-height: 1.4;
+	color: #b4b4b4;
+}
+
+.tapo-steps li + li {
+	margin-top: 4px;
+}
+
+.tapo-steps em {
+	color: #d8d8d8;
+	font-style: normal;
+	font-weight: 600;
+}

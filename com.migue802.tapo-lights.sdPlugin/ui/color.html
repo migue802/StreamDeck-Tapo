@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Colour</title>
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+    <script src="tapo-hash.js"></script>
+    <script src="connection.js"></script>
+    <link rel="stylesheet" href="tapo.css" />
+</head>
+
+<body>
+    <sdpi-item label="Colour">
+        <sdpi-color setting="hex" default="#ff0000"></sdpi-color>
+    </sdpi-item>
+    <sdpi-item>
+        <p class="tapo-hint">Applies to a key press. On a dial, rotate to sweep the hue instead.</p>
+    </sdpi-item>
+
+    <tapo-connection></tapo-connection>
+</body>
+
+</html>

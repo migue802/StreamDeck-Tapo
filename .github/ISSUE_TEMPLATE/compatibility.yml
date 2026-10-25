@@ -1,0 +1,65 @@
+name: Compatibility report
+description: Tell me whether the plugin works with your Tapo light, so support for more lights can be added.
+title: "[Compatibility] "
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing! Opened from the plugin's **Works with your light, or not?** link, the
+        light's details below are already filled in from your last **Test connection**.
+        Nothing here identifies you, your network or your Tapo account — please keep it that way
+        (no IP addresses, emails or passwords).
+  - type: input
+    id: model
+    attributes:
+      label: Light model
+      description: As shown in the Tapo app, or by Test connection.
+      placeholder: L900
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware version
+      placeholder: "1.0"
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      placeholder: 1.1.0 Build 230905 Rel.184207
+  - type: dropdown
+    id: result
+    attributes:
+      label: Does it work?
+      options:
+        - Yes, everything I tried works
+        - Partly (see below)
+        - No, Test connection fails
+        - No, it connects but the light does not respond
+    validations:
+      required: true
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: What did you try?
+      options:
+        - label: Power On/Off
+        - label: Brightness
+        - label: Colour
+        - label: White Temperature
+        - label: Scene
+        - label: Dials (Stream Deck +)
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What worked, what did not, and any error Test connection showed.
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Plugin version
+  - type: input
+    id: stream_deck
+    attributes:
+      label: Stream Deck version and OS

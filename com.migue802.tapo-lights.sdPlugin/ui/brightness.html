@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Brightness</title>
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+    <script src="tapo-hash.js"></script>
+    <script src="connection.js"></script>
+    <link rel="stylesheet" href="tapo.css" />
+</head>
+
+<body>
+    <sdpi-item label="On press">
+        <sdpi-select setting="mode" default="set">
+            <option value="set">Set to a value</option>
+            <option value="increment">Increase</option>
+            <option value="decrement">Decrease</option>
+        </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="Brightness">
+        <sdpi-range setting="value" min="1" max="100" step="1" default="50" showlabels></sdpi-range>
+    </sdpi-item>
+    <sdpi-item label="Step per press">
+        <sdpi-range setting="step" min="1" max="50" step="1" default="10" showlabels></sdpi-range>
+    </sdpi-item>
+    <sdpi-item>
+        <p class="tapo-hint"><em>Set</em> uses the brightness. <em>Increase</em> / <em>Decrease</em> use the step,
+            from the strip's current level. On a dial, rotate to adjust; step below.</p>
+    </sdpi-item>
+    <sdpi-item label="Dial step">
+        <sdpi-range setting="dialStep" min="1" max="10" step="1" default="2" showlabels></sdpi-range>
+    </sdpi-item>
+
+    <tapo-connection></tapo-connection>
+</body>
+
+</html>

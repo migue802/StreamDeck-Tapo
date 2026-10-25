@@ -1,0 +1,30 @@
+{
+	"name": "streamdeck-tapo-lights",
+	"version": "0.1.0",
+	"description": "Stream Deck plugin for local control of the TP-Link Tapo L900 LED strip over KLAP.",
+	"scripts": {
+		"build": "rollup -c",
+		"watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.migue802.tapo-lights\"",
+		"typecheck": "tsc --noEmit",
+		"icons": "tsc -p tsconfig.test.json && node tools/make-icons.mjs",
+		"pretest": "tsc -p tsconfig.test.json",
+		"test": "node --test build-test/test/*.test.js",
+		"validate": "streamdeck validate com.migue802.tapo-lights.sdPlugin"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@elgato/cli": "^1.4.0",
+		"@rollup/plugin-commonjs": "^29.0.2",
+		"@rollup/plugin-node-resolve": "^15.2.2",
+		"@rollup/plugin-terser": "^1.0.0",
+		"@rollup/plugin-typescript": "^12.1.0",
+		"@tsconfig/node20": "^20.1.2",
+		"@types/node": "~24.1.0",
+		"rollup": "^4.0.2",
+		"tslib": "^2.6.2",
+		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"@elgato/streamdeck": "^2.1.0"
+	}
+}

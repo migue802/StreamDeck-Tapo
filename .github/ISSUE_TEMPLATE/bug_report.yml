@@ -1,0 +1,46 @@
+name: Bug report
+description: Something does not work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include IP addresses, emails or passwords.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: And what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add the Power On/Off action to a key
+        2. Press it
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Light model and firmware
+      placeholder: L900, 1.1.0
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin version, Stream Deck version and OS
+      placeholder: 1.0.0, Stream Deck 7.1, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Plugin log
+      description: |
+        Optional. Found in the plugin folder under `logs/` — on Windows,
+        `%APPDATA%\Elgato\StreamDeck\Plugins\com.migue802.tapo-lights.sdPlugin\logs`.
+        Check it for anything private before pasting.
+      render: text

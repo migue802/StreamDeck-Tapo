@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Setup guide
+    url: https://github.com/migue802/StreamDeck-Tapo#setup
+    about: Can't connect? Most problems are covered here.
